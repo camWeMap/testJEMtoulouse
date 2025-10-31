@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Font globale */
+*,
+.wemap-livemap-container h1, .wemap-livemap-container h2, .wemap-livemap-container h3, .wemap-livemap-container h4, .wemap-livemap-container h5,
+.welcome-card-container,
+.wemap-livemap-container button,
+.wemap-search-input #search-input,
+.results-count,
+.share-button span,
+.address,
+.cell-description,
+.cell-address,
+.description-full,
+h3.cell-title b,
+h2.title {
+font-family: "Libre Franklin";
+}
+
+/* Couleurs et survols */
+.results-count {
+color: #2c2760;
+}
+
+.wemap-livemap-container .user-cell.clickable:hover,
+.wemap-livemap-container .list-cell.clickable:hover,
+.wemap-livemap-container .comment-cell.clickable:hover,
+.wemap-livemap-container .timeline-cell.clickable:hover,
+.wemap-livemap-container .pinpoint-cell.clickable:hover {
+background-color: rgba(44, 39, 96, 0.025);
+}
+
+/* Cache certains éléments */
+.wemap-likes {
+display: none;
+}
+
+/* Marges et paddings */
+.wemap-livemap-container .wemap-sidebar-right .header-wrap:not(:empty) {
+padding: 24px;
+}
+
+/* Tags généraux */
+.tag {
+font-weight: 600;
+text-transform: uppercase;
+font-size: 11px;
+line-height: normal;
+border: 1px solid currentColor;
+}
+
+.tag i {
+display: none;
+}
+
+/* Bannière et titres */
+.welcome-card-banner .BackgroundImg-sc-1o5pmv9 {
+border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.welcome-card-panel h2 {
+font-weight: 600 !important;
+}
+
+/* Tags spéciaux */
+.tags-box .tag.rendez-vous-dexception,
+.tags-box .tag.coup-de-coeur {
+width: 100%;
+padding: 4px 0 0 0;
+border: none;
+margin-top: 8px;
+}
+
+/* Tags par catégorie */
+.tag.sante { color: #e74c3c; border-color: #e74c3c; }
+.tag.sante.selected { background: #e74c3c; color: #fff; }
+
+.tag.social { color: #40c2ef; border-color: #40c2ef; }
+.tag.social.selected { background: #40c2ef; color: #fff; }
+
+.tag.loisirs { color: #5a8f5f; border-color: #5a8f5f; }
+.tag.loisirs.selected { background: #5a8f5f; color: #fff; }
+
+.tag.culture { color: #2980b9; border-color: #2980b9; }
+.tag.culture.selected { background: #2980b9; color: #fff; }
+
+.tag.sport { color: #40de32; border-color: #40de32; }
+.tag.sport.selected { background: #40de32; color: #fff; }
+
+.tag.parcours-professionnel { color: #8b4513; border-color: #8b4513; }
+.tag.parcours-professionnel.selected { background: #8b4513; color: #fff; }
+
+.tag.prevention { color: #f39c12; border-color: #f39c12; }
+.tag.prevention.selected { background: #f39c12; color: #fff; }
+
+.tag.se-deplacer-voyager { color: #27ae60; border-color: #27ae60; }
+.tag.se-deplacer-voyager.selected { background: #27ae60; color: #fff; }
+
+.tag.participation-citoyenne { color: #1a3a52; border-color: #1a3a52; }
+.tag.participation-citoyenne.selected { background: #1a3a52; color: #fff; }
+
+.tag.emploi { color: #e67e22; border-color: #e67e22; }
+.tag.emploi.selected { background: #e67e22; color: #fff; }
+
+.tag.reseau-angela { color: #ffb6c1; border-color: #ffb6c1; }
+.tag.reseau-angela.selected { background: #ffb6c1; color: #fff; }
+
+.tag.biblio-bus { color: #add8e6; border-color: #add8e6; }
+.tag.biblio-bus.selected { background: #add8e6; color: #fff; }
+
+/* Correction du bug de double border */
+.bOmagC {
+background-color: initial;
+border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.header-wrap.header-tags {
+padding-left: 0 !important;
+padding-right: 0 !important;
+}
+
+/* Modale participants */
+::backdrop {
+background-color: rgba(10,10,10,.86);
+}
+
+dialog {
+background-color: hsl(0, 0%, 100%);
+border-radius: 6px;
+box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+padding: 1.25rem;
+border: none;
+max-height: calc(100vh - 160px);
+width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+dialog {
+max-height: calc(100vh - 100px);
+width: 500px;
+}
+#wemap-livebar-view {
+box-shadow: rgba(15,15,15,0.04) 0 0 0 1px, rgba(15,15,15,0.03) 0 3px 6px, rgba(15,15,15,0.06) 0 9px 24px;
+}
+}
+
+/* Boutons */
+button {
+border: none;
+color: #fff;
+background-color: #091b8a;
+border-radius: 6px;
+padding: 16px 24px;
+cursor: pointer;
+font-weight: 600;
+}
+
+.wemap-action-button-share {
+color: #000;
+}
+
+.description-full > button {
+width: 100%;
+margin-top: 24px;
+font-size: 16px !important;
+}
+
+.validate-button {
+background-color: #091b8a;
+}
+
+/* Modale images et contenu */
+dialog img {
+grid-area: a;
+width: 56px;
+height: 56px;
+object-fit: cover;
+border-radius: 100px;
+border: 1px solid rgb(238, 238, 238);
+}
+
+dialog button {
+float: right;
+background: none;
+color: rgba(0,0,0,0.5);
+}
+
+.participants {
+clear: right;
+}
+
+.participant {
+overflow: hidden;
+display: grid;
+grid-template:
+"a b"
+"a c"
+"a d"
+"a e";
+justify-content: start;
+column-gap: 24px;
+padding: 24px 0;
+border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.participant a.lien {
+color: #091b8a;
+}
+
+.participant .nom_organisme {
+font-weight: bold;
+font-size: 16px;
+padding-bottom: 8px;
+}
+
+.participant .nom {
+padding-bottom: 4px;
+}
+
+.participant .metiers,
+.participant .lien {
+font-size: 14px;
+color: rgba(0, 0, 0, 0.4);
+}
+
+.participant .metiers {
+padding-bottom: 8px;
+}
+
+/* Ajustements du contenu Wemap */
+.wemap-livemap-container .wemap-template-icon-content {
+margin-left: 0 !important;
+}
+
+.wemap-livemap-container .wemap-template-icon-title>i {
+min-width: initial !important;
+margin-right: 4px !important;
+}
+
+.wemap-template-icon-content {
+margin-bottom: 24px !important;
+}
+
+p {
+margin-bottom: 8px;
+}
+
+.wemap-livemap-container .wemap-template-icon-title>span,
+.wemap-livemap-container .wemap-template-icon-title span b {
+font-weight: 800 !important;
+font-size: 16px !important;
+}
+
+.wemap-livemap-container .wemap-template-icon-title {
+margin-top: 24px !important;
+margin-bottom: 8px !important;
+}
+
+/* Correction du sélecteur */
+h2.title {
+text-transform: capitalize;
+}
+
+.wemap-livemap-container .wemap-sidebar-right .media img,
+.wemap-search-results-view .media div {
+width: 100%;
+max-height: 50vh;
+margin: 0;
+display: block;
+object-fit: cover;
+}
+
+.wemap-search-results-view .media img {
+width: 100%;
+}
+
+.wemap-livemap-container .wemap-sidebar-right .media {
+background: none;
+}
+
+.wemap-livebar-view-innerbox > div:first-child {
+background: none;
+}
+
+.wemap-pinpoint-content-header-title h2.title {
+font-size: 24px;
+font-weight: 700;
+line-height: 150%;
+}
+
+.wemap-pinpoint-content-header,
+.wemap-livemap-container .wemap-sidebar-right .header-wrap:not(:empty) {
+padding: 24px 40px 16px;
+margin: 0;
+}
+
+.address {
+color: #969696;
+}
+
+.wemap-livemap-container .wemap-pinpoint-marker .shape {
+background: none !important;
+}
+
+.wemap-livemap-container .wemap-pinpoint-marker .shape::after {
+display: none !important;
+}
+
+.wemap-livemap-container .wemap-pinpoint-marker.round .wemap-pinpoint-marker-image,
+img.avatar {
+border-radius: 0;
+}
+
+#wemap-pinpoint-details-view img.avatar {
+display: none;
+}
+
+.description-full img {
+border-radius: 100%;
+width: 72px;
+height: 72px;
+border: 2px solid #fff;
+object-fit: cover;
+margin-right: -24px;
+}
+
+.participants img {
+margin-right: 0 !important;
+}
+
+.wemap-more-results-panel button {
+color: initial;
+}
+
+.pinpoint-cell .cell-description {
+height: 1.2em;
+overflow: hidden;
+color: #333;
+line-height: 120%;
+text-overflow: ellipsis;
+white-space: nowrap;
+margin: 2px 0 8px;
+}
